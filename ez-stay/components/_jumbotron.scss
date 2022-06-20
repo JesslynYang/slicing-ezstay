@@ -1,0 +1,61 @@
+@mixin btn-jumbotron {
+    background-color: transparent;
+    padding: 0;
+}
+
+.jumbotron {
+    @include basic-layer;
+    
+}
+
+.jumbotron- {
+    &title {
+        font-weight: 700;
+        
+        color: #24201D;
+
+        @include xs {
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        @include lg {
+            font-size: 70px;
+            line-height: 80px;
+        }
+    }
+    &desc {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #24201D;
+        opacity: 0.6;
+    }
+    &prev {
+        @include btn-jumbotron;
+        margin-right: 5px !important;
+    }
+    &next {
+        @include btn-jumbotron;
+    }
+}
+
+.carousel {
+    &-item {
+        height: 500px;
+
+        border-radius: 30px;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include xs {
+            padding: 60px;
+        }
+
+        @include lg {
+            padding: 100px;
+        }
+    }
+}

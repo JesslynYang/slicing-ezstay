@@ -1,0 +1,48 @@
+.navbar {
+    height: 135px;
+}
+
+.navbar- {
+    &brand {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 45px;
+        color: #000000;
+    }
+
+    &nav {
+        @include top-layer;
+    }
+}
+
+@mixin btn-auth($bg-color: transparent, $text: #000) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: $bg-color;
+    color: $text !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include xs {
+        width: 100%;
+    }
+    @include lg {
+        width: 140px;
+    }
+}
+
+.btn-auth- {
+    &login {
+        @include btn-auth(transparent, #000);
+    }
+    &register {
+        @include btn-auth($orange, #FFF);
+    }
+
+   
+}
+

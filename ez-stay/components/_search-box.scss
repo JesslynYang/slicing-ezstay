@@ -1,0 +1,115 @@
+.search-bar {
+    background-color: #FFF;
+    padding: 15px 20px;
+    position: relative;
+    top: -100px;
+    border-radius: 20px;
+
+    @include sm {
+        top: -120px;
+    }
+    
+    @include lg {
+        top: -30px;
+    }
+    
+
+    @include xl {
+        top: -65px;
+        padding: 35px 40px;
+    }
+}
+
+.search-bar-{
+    
+    &container {
+
+        @include xs {
+            justify-content: flex-start;
+            align-items: flex-start !important;
+            flex-direction: column;
+        }
+
+        @include lg {
+            align-items: flex-center !important;
+            flex-direction: row;
+        }
+    }
+    &group {
+        margin-bottom: 14px;
+
+        &:nth-child(1) {
+            select{
+                background-image: url(../../assets/img/global/Location.svg);
+            }
+        }
+        &:nth-child(2) {
+            select {
+                background-image: url(../../assets/img/global/Activity.svg);
+            }
+        }
+        &:nth-child(3) {
+            select {
+                background-image: url(../../assets/img/global/Date.svg);
+            }
+        }
+
+        @include lg {
+            margin-bottom: 0;
+            &:nth-child(1) {
+                padding-right: 40px;
+            }
+            &:nth-child(2) {
+                padding: 0 40px;
+            }
+            &:nth-child(3) {
+                padding-left: 40px;
+            }
+            &:not(:last-child) {
+                border-right: 3px solid #E3E3E3;
+            }
+        }
+    }
+    &title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+    }
+    &select {
+        width: 160px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+
+        opacity: 0.5;
+
+        outline: none;
+        border: none;
+
+        appearance: none;
+
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        // background-position-y: -5px;
+
+        option {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+
+            opacity: 0.5;
+        }
+    }
+}
+
+.btn-search {
+    @include flex-center-center;
+    width: 70px;
+    height: 70px;
+
+    background: #FC8868;
+    border-radius: 20px;
+}

@@ -1,0 +1,105 @@
+.recommended-{
+    &card {
+        padding: 20px;
+        width: 100%;
+
+        background: #FFFFFF;
+        border: 1px solid #FEFEFE;
+        border-radius: 20px;
+
+        @include card-margin-sm;
+
+        position: relative;
+
+        transition: .8s;
+        &:hover {
+            border: 2px solid #3A8375;
+            transform: translateY(-8px);
+        }
+
+        @include lg {
+            width: 98%;
+            
+        }
+    }
+    &image {
+        width: 100%;
+        min-height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: relative;
+        border-radius: 10px;
+    }
+    &rating {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        width: 40px;
+        height: 20px;
+
+        background: #DAFFF8;
+        border-radius: 10px;
+
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+
+
+        color: #3A8375;
+
+        @include flex-center-center;
+    }
+    &title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        /* identical to box height */
+
+
+        color: #040405;
+    }
+    &price {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        /* identical to box height */
+
+        text-align: right;
+
+        color: #3A8375;
+    }
+    &location {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+
+
+        color: #ADADAD;
+
+        &::before {
+            content: url(../../assets/img/global/Location-sm.svg);
+            position: relative;
+            top: 5.5px;
+            margin-right: 7px;
+        }
+    }
+    &label {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+
+
+        color: #ADADAD;
+
+    }
+
+    &details {
+        margin-top: -8px;
+    }
+}

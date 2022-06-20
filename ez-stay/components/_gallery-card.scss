@@ -1,0 +1,125 @@
+.gallery- {
+    &card {
+        position: relative;
+
+        @include card-margin-sm(30px);
+
+        .btn-gallery {
+            &-container {
+                position: absolute;
+                bottom: 30px;
+                @include flex-center-center;
+
+            }
+            width: 50px;
+            height: 50px;
+
+            background: #FC8868 !important;
+
+            @include flex-center-center;
+
+            border-radius: 50%;
+        }
+    }
+
+    &image {
+        border-radius: 15px;
+        height: 215px;
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        transition: 1s;
+        
+         &:hover {
+            .gallery-cover {
+                display: block !important;
+            }
+        }
+
+        &.large{
+            height: 480px;
+            
+            .btn-gallery {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    &cover {
+
+        transition: 1s;
+
+        border-radius: 15px;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(36, 32, 29, 0.14) 0%, rgba(36, 32, 29, 0.49) 100%);
+
+        padding: 50px 0px;
+
+        transition: .8s;
+
+    }
+
+    &title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        /* identical to box height */
+
+        margin-left: 30px;
+        color: #FFFFFF;
+    }
+
+    &location {
+        margin-left: 30px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+
+
+        color: #ADADAD;
+        &::before {
+            content: url(../../assets/img/global/Location-sm-2.svg);
+            position: relative;
+            top: 5.5px;
+            margin-right: 7px;
+        }
+    }
+
+    &rating {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        /* identical to box height */
+
+
+        color: #3A8375;
+
+        background: #DAFFF8;
+        border-radius: 15px 0px 0px 15px;
+        padding: 4.5px 5px;
+
+        display: inline-block;
+        &::before {
+            content: url(../../assets/img/global/Star.svg);
+            position: relative;
+            top: 3px;
+            margin-right: 7px;
+
+        }
+    }
+
+    
+}

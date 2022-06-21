@@ -88,7 +88,7 @@
 
         color: #ADADAD;
         &::before {
-            content: url(/assets/img/global/Location-sm-2.svg);
+            content: url(./assets/img/global/Location-sm-2.svg);
             position: relative;
             top: 5.5px;
             margin-right: 7px;
@@ -113,7 +113,7 @@
 
         display: inline-block;
         &::before {
-            content: url(/assets/img/global/Star.svg);
+            content: url(./assets/img/global/Star.svg);
             position: relative;
             top: 3px;
             margin-right: 7px;
